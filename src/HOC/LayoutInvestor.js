@@ -4,6 +4,8 @@ import Footer from "../Component/Footer/Footer";
 import Banner from "../Component/Banner/Banner";
 import icon_1 from "../assets/img/Vector-1.png";
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {  faCalendar, faMessage, faSquarePen, faStreetView, faUser, } from "@fortawesome/free-solid-svg-icons";
 
 
 const dataNav = [
@@ -11,31 +13,31 @@ const dataNav = [
     id: 1,
     title: "Danh sách ý tưởng",
     link: "/danh-sach-y-tuong",
-    icon : icon_1
+     icon : faSquarePen
   },
   {
     id: 2,
     title: "Lịch sử quan tâm",
     link: "/lich-su",
-    icon : icon_1
+    icon : faCalendar
   },
   {
     id: 3,
     title: "Cộng đồng",
     link: "/cong-dong",
-    icon : icon_1
+    icon : faStreetView
   },
   {
     id: 4,
     title: "Hồ sơ Nhà đầu tư",
     link: "/ho-so-nha-dau-tu",
-    icon : icon_1
+    icon : faUser
   },
   {
     id: 5,
     title: "Chat AI hỗ trợ",
     link: "/chat-ai-ho-tro",
-    icon : icon_1
+    icon : faMessage
   }
   // {
   //   id: 6,
@@ -52,8 +54,8 @@ export default function LayoutInvestor({ children , title , decs }) {
       return <>
       <NavLink onClick={() => {
         handleChangeIndexNav(item.id)
-      }} key={item.id} to="" className="flex items-center pl-[60px] group py-6">
-        <img src={item.icon} alt="" className={activeNav === item.id ? "w-4 h-4 mr-3  group-hover:opacity-70 group-hover:transition-all " : "w-4 h-4 mr-3 group-hover:opacity-70 group-hover:transition-all"}     />
+      }} key={item.id} to={item.link} className="flex items-center pl-[60px] group py-6">
+        <FontAwesomeIcon icon={item.icon} className={activeNav === item.id ? "w-5 h-5 mr-3 text-[#0A2273]  group-hover:opacity-70 group-hover:transition-all " : "w-5 h-5 mr-3 group-hover:opacity-70 group-hover:transition-all"}></FontAwesomeIcon>
         <h3 className={activeNav === item.id ? "text-base font-bold text-[#0A2273] group-hover:opacity-70 group-hover:transition-all": "text-base font-medium text-[#000000] group-hover:opacity-70 group-hover:transition-all"}>{item.title}</h3>
       </NavLink>
       </>
