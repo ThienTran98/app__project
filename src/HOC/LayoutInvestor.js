@@ -71,8 +71,8 @@ export default function LayoutInvestor({ children , title , decs }) {
       <Header />
       <div className="px-[156px]">
       <Banner title={title} decs={decs} />
-      <div className="px-6 py-5 grid grid-cols-4 gap-4 bg-white" >
-        <div className="border rounded-lg col-span-1 ">
+      <div className="px-6 py-5 grid grid-cols-4 gap-4 bg-white " >
+        <div className=" col-span-1 max-h-[432px] border rounded-lg border-[#75757578]/[47%]">
           {renderNav()}
           <NavLink className="flex items-center justify-center hover:opacity-70 hover:transition-all group py-6 bg-[#0A2273] rounded-bl-lg rounded-br-lg" to="/cai-dat">
         <h3 className="text-base font-medium group-hover:opacity-70 group-hover:transition-all text-white">Cài đặt</h3>

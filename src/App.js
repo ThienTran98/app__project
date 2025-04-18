@@ -23,7 +23,8 @@ function App() {
             }
           />
            <Route
-            path="/danh-sach-y-tuong"
+             path="/danh-sach-y-tuong"
+  
             element={
               <LayoutInvestor title="Danh sách các ý tưởng" decs="Danh sách các ý tưởng startup đang gọi vốn">
                 <ListOfIdeasPage/>
