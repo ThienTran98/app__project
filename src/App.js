@@ -18,7 +18,8 @@ function App() {
             path="/"
             element={
               <LayoutInvestor title="Danh sách các ý tưởng" decs="Danh sách các ý tưởng startup đang gọi vốn">
-                <HomePage />
+                             <ListOfIdeasPage/>
+
               </LayoutInvestor>
             }
           />
